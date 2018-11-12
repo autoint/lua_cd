@@ -1,0 +1,4 @@
+extraction:
+  cpp:
+    after_prepare:
+      - test -f makefile && grep -v "# -pedantic" makefile > makefile2 && mv makefile2 makefile
