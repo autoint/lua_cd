@@ -23,7 +23,8 @@ pipeline {
 		libssl-dev \\
 		git \\
 		sudo \\
---no-install-recommends && rm -r /var/lib/apt/lists/*'''
+--no-install-recommends'''
+        sh 'sudo rm -r /var/lib/apt/lists/*'
         echo 'Setup Tools'
         s3Download(bucket: 'drivers.automation-intelligence', path: 'VectorCAST', file: 'vcast.linux.2018.tar.gz')
         s3Download(bucket: 'drivers.automation-intelligence.com', path: 'VectorCAST', file: 'setupVcLinux.sh')
