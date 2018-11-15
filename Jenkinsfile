@@ -26,8 +26,8 @@ pipeline {
 --no-install-recommends'''
         sh 'sudo rm -r /var/lib/apt/lists/*'
         echo 'Setup Tools'
-        s3Download(bucket: 'drivers.automation-intelligence', path: 'VectorCAST/vcast.linux.2018.tar.gz ', file: 'vcast.linux.2018.tar.gz')
-        s3Download(bucket: 'drivers.automation-intelligence.com', path: 'VectorCAST/setupVcLinux.sh', file: 'setupVcLinux.sh')
+        sh 'wget https://s3-eu-west-1.amazonaws.com/drivers.automation-intelligence/VectorCAST/vcast.linux.2018.tar.gz'
+        sh 'wget https://s3-eu-west-1.amazonaws.com/drivers.automation-intelligence/VectorCAST/setupVcLinux.sh'
         sh 'sudo chmod a+x setupVcLinux.sh'
         sh 'sudo ./setupVcLinux.sh'
         sh 'mkdir /tmp/vcast'
