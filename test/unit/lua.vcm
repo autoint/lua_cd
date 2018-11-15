@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="17">
+  <config>
+    <saved-logs>5</saved-logs>
+    <build-directory-naming-strategy>COMPRESSED</build-directory-naming-strategy>
+  </config>
+  <project-id>1542287548</project-id>
+  <factor-config-options>0</factor-config-options>
+  <group name="Group"/>
+  <compiler>
+    <compiler>
+      <name>GNU_Native_6.3_C</name>
+      <config>
+        <config>
+          <key>C_COMPILER_TAG</key>
+          <value>GNU_C_63</value>
+        </config>
+      </config>
+    </compiler>
+    <testsuite name="TestSuite">
+      <group name="Group"/>
+    </testsuite>
+  </compiler>
+</project>
