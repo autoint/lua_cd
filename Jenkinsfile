@@ -8,7 +8,7 @@ pipeline {
   stages {
     stage('Infrastructure') {
       steps {
-        echo 'Setup Build Environment'
+        echo 'Setup Build Environment - $VECTORCAST_DIR'
         sh 'sudo apt-get update'
         sh '''sudo apt-get install -y \\
 		curl \\
