@@ -6,14 +6,329 @@
   </config>
   <project-id>1542287548</project-id>
   <factor-config-options>0</factor-config-options>
-  <group name="Group"/>
+  <environment name="ENV_LAPI" type="UNIT">
+    <language>2</language>
+    <imported-from-env-script>ENV_LAPI.env</imported-from-env-script>
+    <is-monitored>0</is-monitored>
+    <config>
+      <original-environment-directory>.</original-environment-directory>
+    </config>
+  </environment>
+  <environment name="ENV_LAUXLIB" type="UNIT">
+    <language>2</language>
+    <imported-from-env-script>ENV_LAUXLIB.env</imported-from-env-script>
+    <is-monitored>0</is-monitored>
+    <config>
+      <original-environment-directory>.</original-environment-directory>
+    </config>
+  </environment>
+  <environment name="ENV_LBASELIB" type="UNIT">
+    <language>2</language>
+    <imported-from-env-script>ENV_LBASELIB.env</imported-from-env-script>
+    <is-monitored>0</is-monitored>
+    <config>
+      <original-environment-directory>.</original-environment-directory>
+    </config>
+  </environment>
+  <environment name="ENV_LCODE" type="UNIT">
+    <language>2</language>
+    <imported-from-env-script>ENV_LCODE.env</imported-from-env-script>
+    <is-monitored>0</is-monitored>
+    <config>
+      <original-environment-directory>.</original-environment-directory>
+    </config>
+  </environment>
+  <environment name="ENV_LCOROLIB" type="UNIT">
+    <language>2</language>
+    <imported-from-env-script>ENV_LCOROLIB.env</imported-from-env-script>
+    <is-monitored>0</is-monitored>
+    <config>
+      <original-environment-directory>.</original-environment-directory>
+    </config>
+  </environment>
+  <environment name="ENV_LCTYPE" type="UNIT">
+    <language>2</language>
+    <imported-from-env-script>ENV_LCTYPE.env</imported-from-env-script>
+    <is-monitored>0</is-monitored>
+    <config>
+      <original-environment-directory>.</original-environment-directory>
+    </config>
+  </environment>
+  <environment name="ENV_LDBLIB" type="UNIT">
+    <language>2</language>
+    <imported-from-env-script>ENV_LDBLIB.env</imported-from-env-script>
+    <is-monitored>0</is-monitored>
+    <config>
+      <original-environment-directory>.</original-environment-directory>
+    </config>
+  </environment>
+  <environment name="ENV_LDEBUG" type="UNIT">
+    <language>2</language>
+    <imported-from-env-script>ENV_LDEBUG.env</imported-from-env-script>
+    <is-monitored>0</is-monitored>
+    <config>
+      <original-environment-directory>.</original-environment-directory>
+    </config>
+  </environment>
+  <environment name="ENV_LDO" type="UNIT">
+    <language>2</language>
+    <imported-from-env-script>ENV_LDO.env</imported-from-env-script>
+    <is-monitored>0</is-monitored>
+    <config>
+      <original-environment-directory>.</original-environment-directory>
+    </config>
+  </environment>
+  <environment name="ENV_LDUMP" type="UNIT">
+    <language>2</language>
+    <imported-from-env-script>ENV_LDUMP.env</imported-from-env-script>
+    <is-monitored>0</is-monitored>
+    <config>
+      <original-environment-directory>.</original-environment-directory>
+    </config>
+  </environment>
+  <environment name="ENV_LFUNC" type="UNIT">
+    <language>2</language>
+    <imported-from-env-script>ENV_LFUNC.env</imported-from-env-script>
+    <is-monitored>0</is-monitored>
+    <config>
+      <original-environment-directory>.</original-environment-directory>
+    </config>
+  </environment>
+  <environment name="ENV_LGC" type="UNIT">
+    <language>2</language>
+    <imported-from-env-script>ENV_LGC.env</imported-from-env-script>
+    <is-monitored>0</is-monitored>
+    <config>
+      <original-environment-directory>.</original-environment-directory>
+    </config>
+  </environment>
+  <environment name="ENV_LINIT" type="UNIT">
+    <language>2</language>
+    <imported-from-env-script>ENV_LINIT.env</imported-from-env-script>
+    <is-monitored>0</is-monitored>
+    <config>
+      <original-environment-directory>.</original-environment-directory>
+    </config>
+  </environment>
+  <environment name="ENV_LIOLIB" type="UNIT">
+    <language>2</language>
+    <imported-from-env-script>ENV_LIOLIB.env</imported-from-env-script>
+    <is-monitored>0</is-monitored>
+    <config>
+      <original-environment-directory>.</original-environment-directory>
+    </config>
+  </environment>
+  <environment name="ENV_LLEX" type="UNIT">
+    <language>2</language>
+    <imported-from-env-script>ENV_LLEX.env</imported-from-env-script>
+    <is-monitored>0</is-monitored>
+    <config>
+      <original-environment-directory>.</original-environment-directory>
+    </config>
+  </environment>
+  <environment name="ENV_LMATHLIB" type="UNIT">
+    <language>2</language>
+    <imported-from-env-script>ENV_LMATHLIB.env</imported-from-env-script>
+    <is-monitored>0</is-monitored>
+    <config>
+      <original-environment-directory>.</original-environment-directory>
+    </config>
+  </environment>
+  <environment name="ENV_LMEM" type="UNIT">
+    <language>2</language>
+    <imported-from-env-script>ENV_LMEM.env</imported-from-env-script>
+    <is-monitored>0</is-monitored>
+    <config>
+      <original-environment-directory>.</original-environment-directory>
+    </config>
+  </environment>
+  <environment name="ENV_LOADLIB" type="UNIT">
+    <language>2</language>
+    <imported-from-env-script>ENV_LOADLIB.env</imported-from-env-script>
+    <is-monitored>0</is-monitored>
+    <config>
+      <original-environment-directory>.</original-environment-directory>
+    </config>
+  </environment>
+  <environment name="ENV_LOBJECT" type="UNIT">
+    <language>2</language>
+    <imported-from-env-script>ENV_LOBJECT.env</imported-from-env-script>
+    <is-monitored>0</is-monitored>
+    <config>
+      <original-environment-directory>.</original-environment-directory>
+    </config>
+  </environment>
+  <environment name="ENV_LOPCODES" type="UNIT">
+    <language>2</language>
+    <imported-from-env-script>ENV_LOPCODES.env</imported-from-env-script>
+    <is-monitored>0</is-monitored>
+    <config>
+      <original-environment-directory>.</original-environment-directory>
+    </config>
+  </environment>
+  <environment name="ENV_LOSLIB" type="UNIT">
+    <language>2</language>
+    <imported-from-env-script>ENV_LOSLIB.env</imported-from-env-script>
+    <is-monitored>0</is-monitored>
+    <config>
+      <original-environment-directory>.</original-environment-directory>
+    </config>
+  </environment>
+  <environment name="ENV_LPARSER" type="UNIT">
+    <language>2</language>
+    <imported-from-env-script>ENV_LPARSER.env</imported-from-env-script>
+    <is-monitored>0</is-monitored>
+    <config>
+      <original-environment-directory>.</original-environment-directory>
+    </config>
+  </environment>
+  <environment name="ENV_LSTATE" type="UNIT">
+    <language>2</language>
+    <imported-from-env-script>ENV_LSTATE.env</imported-from-env-script>
+    <is-monitored>0</is-monitored>
+    <config>
+      <original-environment-directory>.</original-environment-directory>
+    </config>
+  </environment>
+  <environment name="ENV_LSTRING" type="UNIT">
+    <language>2</language>
+    <imported-from-env-script>ENV_LSTRING.env</imported-from-env-script>
+    <is-monitored>0</is-monitored>
+    <config>
+      <original-environment-directory>.</original-environment-directory>
+    </config>
+  </environment>
+  <environment name="ENV_LSTRLIB" type="UNIT">
+    <language>2</language>
+    <imported-from-env-script>ENV_LSTRLIB.env</imported-from-env-script>
+    <is-monitored>0</is-monitored>
+    <config>
+      <original-environment-directory>.</original-environment-directory>
+    </config>
+  </environment>
+  <environment name="ENV_LTABLE" type="UNIT">
+    <language>2</language>
+    <imported-from-env-script>ENV_LTABLE.env</imported-from-env-script>
+    <is-monitored>0</is-monitored>
+    <config>
+      <original-environment-directory>.</original-environment-directory>
+    </config>
+  </environment>
+  <environment name="ENV_LTABLIB" type="UNIT">
+    <language>2</language>
+    <imported-from-env-script>ENV_LTABLIB.env</imported-from-env-script>
+    <is-monitored>0</is-monitored>
+    <config>
+      <original-environment-directory>.</original-environment-directory>
+    </config>
+  </environment>
+  <environment name="ENV_LTESTS" type="UNIT">
+    <language>2</language>
+    <imported-from-env-script>ENV_LTESTS.env</imported-from-env-script>
+    <is-monitored>0</is-monitored>
+    <config>
+      <original-environment-directory>.</original-environment-directory>
+    </config>
+  </environment>
+  <environment name="ENV_LTM" type="UNIT">
+    <language>2</language>
+    <imported-from-env-script>ENV_LTM.env</imported-from-env-script>
+    <is-monitored>0</is-monitored>
+    <config>
+      <original-environment-directory>.</original-environment-directory>
+    </config>
+  </environment>
+  <environment name="ENV_LUA" type="UNIT">
+    <language>2</language>
+    <imported-from-env-script>ENV_LUA.env</imported-from-env-script>
+    <is-monitored>0</is-monitored>
+    <config>
+      <original-environment-directory>.</original-environment-directory>
+    </config>
+  </environment>
+  <environment name="ENV_LUNDUMP" type="UNIT">
+    <language>2</language>
+    <imported-from-env-script>ENV_LUNDUMP.env</imported-from-env-script>
+    <is-monitored>0</is-monitored>
+    <config>
+      <original-environment-directory>.</original-environment-directory>
+    </config>
+  </environment>
+  <environment name="ENV_LUTF8LIB" type="UNIT">
+    <language>2</language>
+    <imported-from-env-script>ENV_LUTF8LIB.env</imported-from-env-script>
+    <is-monitored>0</is-monitored>
+    <config>
+      <original-environment-directory>.</original-environment-directory>
+    </config>
+  </environment>
+  <environment name="ENV_LVM" type="UNIT">
+    <language>2</language>
+    <imported-from-env-script>ENV_LVM.env</imported-from-env-script>
+    <is-monitored>0</is-monitored>
+    <config>
+      <original-environment-directory>.</original-environment-directory>
+    </config>
+  </environment>
+  <environment name="ENV_LZIO" type="UNIT">
+    <language>2</language>
+    <imported-from-env-script>ENV_LZIO.env</imported-from-env-script>
+    <is-monitored>0</is-monitored>
+    <config>
+      <original-environment-directory>.</original-environment-directory>
+    </config>
+  </environment>
+  <group name="Group">
+    <environment name="ENV_LAPI"/>
+    <environment name="ENV_LAUXLIB"/>
+    <environment name="ENV_LBASELIB"/>
+    <environment name="ENV_LCODE"/>
+    <environment name="ENV_LCOROLIB"/>
+    <environment name="ENV_LCTYPE"/>
+    <environment name="ENV_LDBLIB"/>
+    <environment name="ENV_LDEBUG"/>
+    <environment name="ENV_LDO"/>
+    <environment name="ENV_LDUMP"/>
+    <environment name="ENV_LFUNC"/>
+    <environment name="ENV_LGC"/>
+    <environment name="ENV_LINIT"/>
+    <environment name="ENV_LIOLIB"/>
+    <environment name="ENV_LLEX"/>
+    <environment name="ENV_LMATHLIB"/>
+    <environment name="ENV_LMEM"/>
+    <environment name="ENV_LOADLIB"/>
+    <environment name="ENV_LOBJECT"/>
+    <environment name="ENV_LOPCODES"/>
+    <environment name="ENV_LOSLIB"/>
+    <environment name="ENV_LPARSER"/>
+    <environment name="ENV_LSTATE"/>
+    <environment name="ENV_LSTRING"/>
+    <environment name="ENV_LSTRLIB"/>
+    <environment name="ENV_LTABLE"/>
+    <environment name="ENV_LTABLIB"/>
+    <environment name="ENV_LTESTS"/>
+    <environment name="ENV_LTM"/>
+    <environment name="ENV_LUA"/>
+    <environment name="ENV_LUNDUMP"/>
+    <environment name="ENV_LUTF8LIB"/>
+    <environment name="ENV_LVM"/>
+    <environment name="ENV_LZIO"/>
+  </group>
   <compiler>
     <compiler>
       <name>GNU_Native_6.3_C</name>
       <config>
         <config>
+          <key>WHITEBOX</key>
+          <value>YES</value>
+          <key>COVERAGE_TYPE</key>
+          <value>STATEMENT+MCDC</value>
+          <key>VCDB_FILENAME</key>
+          <value>../artefacts/lua_vcdb.db</value>
           <key>C_COMPILER_TAG</key>
           <value>GNU_C_63</value>
+          <key>VCAST_ASSEMBLY_FILE_EXTENSIONS</key>
+          <value>asm s</value>
         </config>
       </config>
     </compiler>
