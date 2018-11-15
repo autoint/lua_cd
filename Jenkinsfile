@@ -27,9 +27,14 @@ pipeline {
         sh 'sudo rm -r /var/lib/apt/lists/*'
         echo 'Setup Tools'
         sh 'wget https://s3-eu-west-1.amazonaws.com/drivers.automation-intelligence/VectorCAST/vcast.linux.2018.tar.gz'
-        sh 'wget https://s3-eu-west-1.amazonaws.com/drivers.automation-intelligence/VectorCAST/setupVcLinux.sh'
-        sh 'sudo chmod a+x setupVcLinux.sh'
-        sh 'sudo ./setupVcLinux.sh'
+        sh '''sudo dpkg --add-architecture i386 &&
+sudo apt-get update &&
+sudo apt-get install -y lsb &&
+sudo apt-get install -y libfontconfig:i386 &&
+sudo apt-get install -y libxext6:i386  &&
+sudo apt-get install -y libxrender1:i386 &&
+sudo apt-get install -y libglib2.0-0:i386 &&
+'''
         sh 'mkdir -p $VECTORCAST_DIR'
         sh 'tar -xvf vcast.linux.2018.tar.gz -C $VECTORCAST_DIR'
         sh '$VECTORCAST_DIR/clicast'
