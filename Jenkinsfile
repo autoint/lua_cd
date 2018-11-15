@@ -30,10 +30,14 @@ pipeline {
         sh 'wget https://s3-eu-west-1.amazonaws.com/drivers.automation-intelligence/VectorCAST/setupVcLinux.sh'
         sh 'sudo chmod a+x setupVcLinux.sh'
         sh 'sudo ./setupVcLinux.sh'
-        sh 'mkdir /tmp/vcast'
-        sh 'tar -xvf vcast.linux.2018.tar.gz -C /tmp/vcast'
-        sh 'export VECTORCAST_DIR=/tmp/vcast && export VECTOR_LICENSE_FILE=27000@18.205.131.82 && $VECTORCAST_DIR/clicast'
+        sh 'mkdir -p $VECTORCAST_DIR'
+        sh 'tar -xvf vcast.linux.2018.tar.gz -C $VECTORCAST_DIR'
+        sh '$VECTORCAST_DIR/clicast'
       }
     }
+  }
+  environment {
+    VECTORCAST_DIR = '/tmp/vcast'
+    VECTOR_LICENSE_FILE = '27000@18.205.131.82'
   }
 }
