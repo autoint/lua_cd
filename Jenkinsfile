@@ -23,6 +23,7 @@ pipeline {
 		libssl-dev \\
 		git \\
 		sudo \\
+                xterm \\
 --no-install-recommends'''
         sh 'sudo rm -r /var/lib/apt/lists/*'
         echo 'Setup Tools'
