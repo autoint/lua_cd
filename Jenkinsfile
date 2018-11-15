@@ -46,6 +46,7 @@ pipeline {
       steps {
         sh 'make clean'
         sh '$VECTORCAST_DIR/vcshell --db=lua_vcdb.db make'
+        sh 'mv lua_vcdb.db test/artefacts/'
       }
     }
   }
