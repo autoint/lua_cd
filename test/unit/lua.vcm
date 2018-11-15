@@ -324,7 +324,7 @@
           <key>COVERAGE_TYPE</key>
           <value>STATEMENT+MCDC</value>
           <key>VCDB_FILENAME</key>
-          <value>../artefacts/lua_vcdb.db</value>
+          <value>$(LUA_ROOT)/test/artefacts/lua_vcdb.db</value>
           <key>C_COMPILER_TAG</key>
           <value>GNU_C_63</value>
           <key>VCAST_ASSEMBLY_FILE_EXTENSIONS</key>
