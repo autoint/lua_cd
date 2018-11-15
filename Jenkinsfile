@@ -36,6 +36,18 @@ pipeline {
         sh '$VECTORCAST_DIR/clicast'
       }
     }
+    stage('Build') {
+      steps {
+        sh 'test -f makefile && grep -v "# -pedantic" makefile > makefile2 && mv makefile2 makefile'
+        sh 'make'
+      }
+    }
+    stage('Build Snoop') {
+      steps {
+        sh 'make clean'
+        sh '$VECTORCAST_DIR/vcshell --db=lua_vcdb.db make'
+      }
+    }
   }
   environment {
     VECTORCAST_DIR = '/tmp/vcast'
