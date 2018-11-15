@@ -10,7 +10,6 @@ pipeline {
       steps {
         echo 'Setup Build Environment'
         sh 'sudo apt-get update'
-        sh 'sudo apt-get upgrade -y'
         sh '''sudo apt-get install -y \\
 		curl \\
 		wget \\
