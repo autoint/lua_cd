@@ -53,6 +53,6 @@ pipeline {
   }
   environment {
     VECTORCAST_DIR = '/tmp/vcast'
-    VECTOR_LICENSE_FILE = '27000@18.205.131.82'
+    VECTOR_LICENSE_FILE = '27000@lic.automation-intelligence.com'
   }
 }
