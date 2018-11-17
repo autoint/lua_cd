@@ -31,9 +31,9 @@ pipeline {
         sh '''sudo apt-get update
 '''
         sh 'sudo apt-get install -y lsb libfontconfig:i386 libxext6:i386 libxrender1:i386 libglib2.0-0:i386'
-        sh 'wget https://s3-eu-west-1.amazonaws.com/drivers.automation-intelligence/VectorCAST/vcast.linux.2018.tar.gz'
+        sh 'wget https://s3-eu-west-1.amazonaws.com/drivers.automation-intelligence/VectorCAST/vcast.linux.$VERSION_VECTORCAST.tar.gz'
         sh 'mkdir -p $VECTORCAST_DIR'
-        sh 'tar -xvf vcast.linux.2018.tar.gz -C $VECTORCAST_DIR'
+        sh 'tar -xvf vcast.linux.$VERSION_VECTORCAST.tar.gz -C $VECTORCAST_DIR'
         sh '$VECTORCAST_DIR/clicast'
       }
     }
@@ -54,5 +54,6 @@ pipeline {
   environment {
     VECTORCAST_DIR = '/tmp/vcast'
     VECTOR_LICENSE_FILE = '27000@lic.automation-intelligence.com'
+    VERSION_VECTORCAST = '2018sp3'
   }
 }
