@@ -1,14 +1,9 @@
 FROM ubuntu:artful
-
 WORKDIR /luademo/src
-
 LABEL maintainer="Niroshan Rajadurai ncr _at_ moat . blog"
-
 ENV lua_verision  master
 
-
 # install essential packages for building other packages
-
 RUN apt-get update && apt-get upgrade -y && apt-get install -y \
 		curl \
 		wget \
