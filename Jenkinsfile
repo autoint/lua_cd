@@ -52,7 +52,7 @@ pipeline {
     }
     stage('Unit Test') {
       steps {
-        dir(path: 'test') {
+        dir(path: 'test/unit') {
           sh '$VECTORCAST_DIR/manage --project lua --build-execute --incremental --output inc_results.html'
           sh '''$VECTORCAST_DIR/manage --project lua --full-status=status.html
 '''
