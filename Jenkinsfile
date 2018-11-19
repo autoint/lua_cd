@@ -53,7 +53,7 @@ pipeline {
     stage('Unit Test') {
       steps {
         dir(path: 'test/unit') {
-          sh 'export LUA_ROOT=\'pwd\' && $VECTORCAST_DIR/manage --project lua --build-execute --incremental --output inc_results.html'
+          sh 'export LUA_ROOT=`pwd`../.. && $VECTORCAST_DIR/manage --project lua --build-execute --incremental --output inc_results.html'
           sh '''export LUA_ROOT=\'pwd\' && $VECTORCAST_DIR/manage --project lua --full-status=status.html
 '''
           sh '''export LUA_ROOT=\'pwd\' && $VECTORCAST_DIR/manage --project lua --create-report=aggregate
