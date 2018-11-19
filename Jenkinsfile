@@ -53,18 +53,18 @@ pipeline {
     stage('Unit Test') {
       steps {
         dir(path: 'test/unit') {
-          sh '$VECTORCAST_DIR/manage --project lua --build-execute --incremental --output inc_results.html'
-          sh '''$VECTORCAST_DIR/manage --project lua --full-status=status.html
+          sh 'export LUA_ROOT=\'pwd\' && $VECTORCAST_DIR/manage --project lua --build-execute --incremental --output inc_results.html'
+          sh '''export LUA_ROOT=\'pwd\' && $VECTORCAST_DIR/manage --project lua --full-status=status.html
 '''
-          sh '''$VECTORCAST_DIR/manage --project lua --create-report=aggregate
+          sh '''export LUA_ROOT=\'pwd\' && $VECTORCAST_DIR/manage --project lua --create-report=aggregate
 '''
-          sh '''$VECTORCAST_DIR/manage --project lua --create-report=metrics
+          sh '''export LUA_ROOT=\'pwd\' && $VECTORCAST_DIR/manage --project lua --create-report=metrics
 '''
-          sh '''$VECTORCAST_DIR/manage --project lua --create-report=environment
+          sh '''export LUA_ROOT=\'pwd\' && $VECTORCAST_DIR/manage --project lua --create-report=environment
 '''
-          sh '''$VECTORCAST_DIR/manage --project lua --clicast-args report custom management
+          sh '''export LUA_ROOT=\'pwd\' && $VECTORCAST_DIR/manage --project lua --clicast-args report custom management
 '''
-          sh '''$VECTORCAST_DIR/manage --project lua --clicast-args report custom actual
+          sh '''export LUA_ROOT=\'pwd\' && $VECTORCAST_DIR/manage --project lua --clicast-args report custom actual
 
 '''
         }
