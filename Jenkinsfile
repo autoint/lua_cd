@@ -50,6 +50,29 @@ pipeline {
         sh 'mv lua_vcdb.db test/artefacts/'
       }
     }
+    stage('Unit Test') {
+      steps {
+        sh '$VECTORCAST_DIR/manage --project lua --build-execute --incremental --output inc_results.html'
+        sh '''$VECTORCAST_DIR/manage --project lua --full-status=status.html
+'''
+        sh '''$VECTORCAST_DIR/manage --project lua --create-report=aggregate
+'''
+        sh '''$VECTORCAST_DIR/manage --project lua --create-report=metrics
+'''
+        sh '''$VECTORCAST_DIR/manage --project lua --create-report=environment
+'''
+        sh '''$VECTORCAST_DIR/manage --project lua --clicast-args report custom management
+'''
+        sh '''$VECTORCAST_DIR/manage --project lua --clicast-args report custom actual
+
+'''
+      }
+    }
+    stage('Store Results') {
+      steps {
+        archiveArtifacts '*.html'
+      }
+    }
   }
   environment {
     VECTORCAST_DIR = '/tmp/vcast'
