@@ -73,7 +73,7 @@ pipeline {
     }
     stage('Store Results') {
       steps {
-        dir(path: 'test') {
+        dir(path: 'test/unit') {
           archiveArtifacts '*.html'
         }
 
