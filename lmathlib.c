@@ -25,6 +25,7 @@
 #undef PI
 #define PI	(l_mathop(3.141592653589793238462643383279502884))
 
+typedef unsigned char uint8_t;
 
 static int math_abs (lua_State *L) {
   if (lua_isinteger(L, 1)) {
@@ -112,6 +113,17 @@ static int math_ceil (lua_State *L) {
   }
   return 1;
 }
+
+
+ static uint8_t math_add_8bit (uint8_t x, uint8_t y) {
+
+   if (x + y < x) {  //check overflow
+    return x;
+  }
+
+   return x+y;
+
+ }
 
 
 static int math_fmod (lua_State *L) {
