@@ -1,4 +1,9 @@
 extraction:
   cpp:
     after_prepare:
-      - test -f makefile && grep -v "# -pedantic" makefile > makefile2 && mv makefile2 makefile
+      - export GNU_MAKE=make
+      - export GIT=true 
+      - test -f makefile && grep -v "# -pedantic" makefile > makefile2 && mv makefile2 makefile    
+    index:    # Customizable step used by all languages.
+      build_command:
+        - $GNU_MAKE sv1.exe      
