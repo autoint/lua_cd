@@ -6,7 +6,21 @@ jobs:
     name: A job to build lua 
     steps:
     - name: Docker
-      uses: docker://nirocr/lua_cd
+      run: |
+        apt-get update && apt-get upgrade -y && apt-get install -y \
+		curl \
+		wget \
+		build-essential \
+		make \
+		gcc \
+		mingw-w64 \
+		libreadline-dev \
+		ca-certificates \
+		unzip \
+		libssl-dev \
+		git \
+		sudo \
+--no-install-recommends
     - uses: actions/checkout@v1
     - name: Where am I
       run: |
