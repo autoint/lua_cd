@@ -1,6 +1,6 @@
-FROM ubuntu:artful
+FROM ubuntu:latest
 WORKDIR /luademo/src
-LABEL maintainer="Niroshan Rajadurai ncr _at_ moat . blog"
+LABEL maintainer="Niroshan R nirocr _at_ gmail . com"
 ENV lua_verision  master
 
 # install essential packages for building other packages
@@ -22,7 +22,7 @@ RUN apt-get update && apt-get upgrade -y && apt-get install -y \
 RUN mkdir /opt/work
 WORKDIR /opt/work
 
-RUN git clone https://github.com/nirocr/lua_demo.git
+RUN git clone https://github.com/nirocr/lua_cd.git
 
 WORKDIR /opt/work/lua_demo
 
