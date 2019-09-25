@@ -5,6 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     name: A job to build lua 
     steps:
+    - uses: actions/checkout@v1
     - name: Where am I
       run: |
         pwd
