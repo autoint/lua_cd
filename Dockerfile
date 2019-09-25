@@ -18,14 +18,3 @@ RUN apt-get update && apt-get upgrade -y && apt-get install -y \
 		git \
 		sudo \
 --no-install-recommends && rm -r /var/lib/apt/lists/*
-
-RUN mkdir /opt/work
-WORKDIR /opt/work
-
-RUN git clone https://github.com/nirocr/lua_cd.git
-
-WORKDIR /opt/work/lua_demo
-
-RUN test -f makefile && grep -v "# -pedantic" makefile > makefile2 && mv makefile2 makefile
-
-RUN make
