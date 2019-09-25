@@ -5,15 +5,13 @@ jobs:
     runs-on: ubuntu-latest
     name: A job to build lua 
     steps:
+    - name: Docker
+      uses: docker://nirocr/lua_cd
     - uses: actions/checkout@v1
     - name: Where am I
       run: |
         pwd
-        ls -al
-    
-#    - name: Docker
-#      uses: docker://nirocr/lua_cd
-      
+        ls -al  
     - name: Build
       run: |
         ls -al
