@@ -10,6 +10,7 @@ jobs:
       
     - name: Build
       run: |
+        ls -al
         test -f makefile && grep -v "# -pedantic" makefile > makefile2 && mv makefile2 makefile
         make
     
