@@ -1,0 +1,10 @@
+on: [push]
+
+jobs:
+  lua_github_actions_job:
+    runs-on: ubuntu-latest
+    name: A job to build lua 
+    steps:
+    - name: Docker step
+      uses: docker://nirocr/lua_cd
+    
