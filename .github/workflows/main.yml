@@ -5,8 +5,10 @@ jobs:
     runs-on: ubuntu-latest
     name: A job to build lua 
     steps:
-    - name: Build
+    - name: Docker
       uses: docker://nirocr/lua_cd
+      
+   - name: Build
       run: |
         test -f makefile && grep -v "# -pedantic" makefile > makefile2 && mv makefile2 makefile
         make
