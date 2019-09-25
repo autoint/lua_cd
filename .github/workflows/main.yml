@@ -10,8 +10,8 @@ jobs:
         pwd
         ls -al
     
-    - name: Docker
-      uses: docker://nirocr/lua_cd
+#    - name: Docker
+#      uses: docker://nirocr/lua_cd
       
     - name: Build
       run: |
