@@ -63,10 +63,4 @@ jobs:
       run: |
          mkdir -p test/unit
          cd test/unit
-         $VECTORCAST_DIR/manage --project lua --build-execute --incremental --output inc_results.html
-         $VECTORCAST_DIR/manage --project lua --full-status=status.html
-         $VECTORCAST_DIR/manage --project lua --create-report=aggregate
-         $VECTORCAST_DIR/manage --project lua --create-report=metrics
-         $VECTORCAST_DIR/manage --project lua --create-report=environment
-         $VECTORCAST_DIR/manage --project lua --clicast-args report custom management
-         $VECTORCAST_DIR/manage --project lua --clicast-args report custom actual
+         export LUA_ROOT=`pwd`/../.. && $VECTORCAST_DIR/manage --project lua --build-execute --incremental --output inc_results.html
