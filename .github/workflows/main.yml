@@ -5,10 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     name: A job to build lua 
     steps:
-    env:
-       VECTORCAST_DIR: /tmp/vcast
-       VECTOR_LICENSE_FILE: 27000@lic.automation-intelligence.com
-       VERSION_VECTORCAST: 2018    
+    
     - name: Dependencies Install
       run: |
         sudo apt-get install -y \
@@ -29,6 +26,10 @@ jobs:
     - uses: actions/checkout@v1
     
     - name: Setup Tools
+       env:
+         VECTORCAST_DIR: /tmp/vcast
+         VECTOR_LICENSE_FILE: 27000@lic.automation-intelligence.com
+         VERSION_VECTORCAST: 2018 
       run: |
         sudo dpkg --add-architecture i386
         sudo apt-get update
@@ -44,7 +45,11 @@ jobs:
         test -f makefile && grep -v "# -pedantic" makefile > makefile2 && mv makefile2 makefile
         make
 
-    - name: Build Snoop
+    - name: Build Snoop    
+       env:
+         VECTORCAST_DIR: /tmp/vcast
+         VECTOR_LICENSE_FILE: 27000@lic.automation-intelligence.com
+         VERSION_VECTORCAST: 2018 
       run: |
         make clean
         $VECTORCAST_DIR/vcshell --db=lua_vcdb.db make
