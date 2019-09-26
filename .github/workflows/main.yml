@@ -4,12 +4,11 @@ jobs:
   lua_github_actions_job:
     runs-on: ubuntu-latest
     name: A job to build lua 
+    steps:
     env:
        VECTORCAST_DIR: /tmp/vcast
        VECTOR_LICENSE_FILE: 27000@lic.automation-intelligence.com
-       VERSION_VECTORCAST: 2018
-    steps:
-    
+       VERSION_VECTORCAST: 2018    
     - name: Dependencies Install
       run: |
         sudo apt-get install -y \
