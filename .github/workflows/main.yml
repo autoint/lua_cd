@@ -52,4 +52,21 @@ jobs:
       run: |
         make clean
         $VECTORCAST_DIR/vcshell --db=lua_vcdb.db make
+        mkdir -p test/artefacts
         mv lua_vcdb.db test/artefacts/
+    - name: Unit Testing
+      env:
+       VECTORCAST_DIR: /tmp/vcast
+       VECTOR_LICENSE_FILE: 27000@lic.automation-intelligence.com
+       VERSION_VECTORCAST: 2018
+       LUA_ROOT: ../../
+      run: |
+         mkdir -p test/unit
+         cd test/unit
+         $VECTORCAST_DIR/manage --project lua --build-execute --incremental --output inc_results.html
+         $VECTORCAST_DIR/manage --project lua --full-status=status.html
+         $VECTORCAST_DIR/manage --project lua --create-report=aggregate
+         $VECTORCAST_DIR/manage --project lua --create-report=metrics
+         $VECTORCAST_DIR/manage --project lua --create-report=environment
+         $VECTORCAST_DIR/manage --project lua --clicast-args report custom management
+         $VECTORCAST_DIR/manage --project lua --clicast-args report custom actual
