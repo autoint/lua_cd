@@ -4,8 +4,7 @@ jobs:
   lua_github_actions_job:
     runs-on: ubuntu-latest
     name: A job to build lua 
-    steps:
-    
+    steps:    
     - name: Dependencies Install
       run: |
         sudo apt-get install -y \
