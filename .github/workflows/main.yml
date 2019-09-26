@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     name: A job to build lua 
     steps:
-    - name: Docker
+    - name: Dependencies Install
       run: |
         sudo apt-get install -y \
             curl \
@@ -22,6 +22,19 @@ jobs:
             sudo \
             --no-install-recommends
     - uses: actions/checkout@v1
+    - name: Setup Tools
+      env:
+       VECTORCAST_DIR: /tmp/vcast
+       VECTOR_LICENSE_FILE: 27000@lic.automation-intelligence.com
+       VERSION_VECTORCAST: 2018
+      run: |
+        sudo dpkg --add-architecture i386
+        sudo apt-get update
+        sudo apt-get install -y lsb libfontconfig:i386 libxext6:i386 libxrender1:i386 libglib2.0-0:i386
+        wget https://s3-eu-west-1.amazonaws.com/drivers.automation-intelligence/VectorCAST/vcast.linux.$VERSION_VECTORCAST.tar.gz
+        mkdir -p $VECTORCAST_DIR
+        tar -xvf vcast.linux.$VERSION_VECTORCAST.tar.gz -C $VECTORCAST_DIR
+        $VECTORCAST_DIR/clicast
     - name: Where am I
       run: |
         pwd
