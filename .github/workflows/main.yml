@@ -25,6 +25,8 @@ jobs:
     
     - uses: actions/checkout@v1
     
+    - run: mkdir -p artifacts    
+    
     - name: Setup Tools
       env:
        VECTORCAST_DIR: /tmp/vcast
@@ -64,3 +66,17 @@ jobs:
          mkdir -p test/unit
          cd test/unit
          export LUA_ROOT=`pwd`/../.. && $VECTORCAST_DIR/manage --project lua --build-execute --incremental --output inc_results.html
+         export LUA_ROOT=`pwd`/../.. && $VECTORCAST_DIR/manage --project lua --full-status=status.html
+         export LUA_ROOT=`pwd`/../.. && $VECTORCAST_DIR/manage --project lua --create-report=aggregate
+         export LUA_ROOT=`pwd`/../.. && $VECTORCAST_DIR/manage --project lua --create-report=metrics
+         export LUA_ROOT=`pwd`/../.. && $VECTORCAST_DIR/manage --project lua --create-report=environment
+         export LUA_ROOT=`pwd`/../.. && $VECTORCAST_DIR/manage --project lua --clicast-args report custom management
+         export LUA_ROOT=`pwd`/../.. && $VECTORCAST_DIR/manage --project lua --clicast-args report custom actual
+         ls -al
+         mv *.html ../artefacts
+
+    - uses: actions/upload-artifact@master
+      with:
+         name: lua-artifact
+         path: test/artefacts
+
