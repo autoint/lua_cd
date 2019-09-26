@@ -34,12 +34,9 @@ jobs:
      mkdir -p $VECTORCAST_DIR
      tar -xvf vcast.linux.$VERSION_VECTORCAST.tar.gz -C $VECTORCAST_DIR
      $VECTORCAST_DIR/clicast
-    - uses: actions/checkout@v1
-    - name: Where am I
-      run: |
-        pwd
-        ls -al  
-    - name: Build
+   - name: Checkout     
+   - uses: actions/checkout@v1
+   - name: Build
       run: |
         ls -al
         test -f makefile && grep -v "# -pedantic" makefile > makefile2 && mv makefile2 makefile
